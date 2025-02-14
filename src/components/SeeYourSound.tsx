@@ -5,28 +5,29 @@ const SeeYourSound = () => {
   return (
     <section className="py-16 px-4">
       <div className="container mx-auto text-center">
-        <div className="relative mb-12">
-          <motion.div 
+        {/* Image Container */}
+        <div className="relative mb-12 flex flex-col items-center md:flex-row md:justify-center md:space-x-6">
+          <motion.img 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="relative z-10"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?auto=format&fit=crop&q=80"
-              alt="DJ mixing"
-              className="rounded-lg shadow-2xl mx-auto mb-4 max-w-2xl"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80"
-              alt="Music visualization"
-              className="rounded-lg shadow-2xl mx-auto max-w-xl transform -mt-20 ml-auto"
-            />
-          </motion.div>
+            src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?auto=format&fit=crop&q=80"
+            alt="DJ mixing"
+            className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl rounded-lg shadow-2xl object-cover aspect-video mb-4 md:mb-0"
+          />
+          <motion.img 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80"
+            alt="Music visualization"
+            className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl rounded-lg shadow-2xl object-cover aspect-video md:mt-12"
+          />
         </div>
+
+        {/* Text Content */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-5xl md:text-7xl font-bold mb-6"
+          className="text-4xl md:text-6xl font-bold mb-6"
         >
           See Your Sound
         </motion.h2>
@@ -34,10 +35,12 @@ const SeeYourSound = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
+          className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
         >
           Enhance your auditory experience with dynamic music visualizations. Watch as your music comes to life with stunning graphics that move to the beat.
         </motion.p>
+
+        {/* Download Button */}
         <motion.button
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
